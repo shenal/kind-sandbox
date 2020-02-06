@@ -15,8 +15,7 @@ sudo add-apt-repository \
 sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io -y
 sudo usermod -aG docker $USER
-newgrp docker
 curl -Lo ./kind https://github.com/kubernetes-sigs/kind/releases/download/v0.7.0/kind-$(uname)-amd64
 chmod +x ./kind
 sudo mv ./kind /usr/local/bin/kind
-
+newgrp docker
